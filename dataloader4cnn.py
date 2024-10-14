@@ -51,7 +51,7 @@ class WeiboDataset4Cnn(BaseDataset):
         label = int(label)
         if label == 1:  # fake
             image_folder = self.root_dir + "rumor_images/"
-        else:
+        else: # real
             image_folder = self.root_dir + "nonrumor_images/"
         label = torch.tensor(label)
 
