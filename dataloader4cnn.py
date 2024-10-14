@@ -6,7 +6,6 @@ import os
 from PIL import Image
 
 
-# 文本分词和填充
 def tokenize_text(text, vocab, max_len=10):
     tokens = nltk.word_tokenize(text.lower())
     token_ids = [vocab.get(token, vocab['<pad>']) for token in tokens]
