@@ -151,7 +151,6 @@ class Trainer():
                 train_true.append(label.detach().cpu().numpy())
                 train_pred.append(logits.detach().cpu().numpy())
 
-            # 记录训练数据
             train_true = np.concatenate(train_true)
             train_pred = np.concatenate(train_pred)
             train_acc = metrics.accuracy_score(train_true, train_pred)
